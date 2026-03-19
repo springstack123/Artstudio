@@ -1,0 +1,65 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+/* ── ADD TO BOTTOM OF App.css ──────────────────────────────
+   Universal navbar clearance. The .page class already has
+   padding-top set, but pages like About, Contact, Settings,
+   Shop that use their own wrappers need this too.
+   80px = exact nav height. Adjust only if nav height changes.
+──────────────────────────────────────────────────────────── */
+
+.page,
+.about-page,
+.contact-section,
+.settings-page,
+.shop-page,
+.commission-content,
+.sketch-club-page,
+.profile-page,
+.my-profile-page,
+.orders-page {
+  padding-top: 80px !important;
+}
+
+/* Home hero manages its own offset — undo the rule for it */
+.hero {
+  padding-top: 6rem;
+}
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
